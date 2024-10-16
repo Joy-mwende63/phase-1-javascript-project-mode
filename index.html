@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>My Book Library</h1>
+    <div>
+        <input type="text" id="search" placeholder="Search by title">
+        <select id="genre-filter">
+            <option value="">All Genres</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Dystopian">Dystopian</option>
+            <option value="Classic">Classic</option>
+            <option value="Adventure">Adventure</option>
+        </select>
+    </div>
+    <ul id="book-list"></ul>
+    <form id="book-form">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <input type="text" id="genre" placeholder="Genre" required>
+        <button type="submit">Add Book</button>
+    <div id="statistics"></div>
+
+     <script src="script.js"></script>
+</body>
+</html>

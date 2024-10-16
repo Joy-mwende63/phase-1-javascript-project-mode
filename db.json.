@@ -1,0 +1,63 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Fiction",
+      "borrowed": false,
+      "borrowersName": null,
+      "borrowedDate": null,
+      "borrowerName": null,
+      "borrowDate": null,
+      "borrowCount": 5
+    },
+    {
+      "id": "2",
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "borrowed": false,
+      "borrowersName": null,
+      "borrowedDate": null,
+      "borrowCount": 3,
+      "borrowerName": null,
+      "borrowDate": null
+    },
+    {
+      "id": "3",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Classic",
+      "borrowed": false,
+      "borrowersName": null,
+      "borrowedDate": null,
+      "borrowCount": 1,
+      "borrowerName": null,
+      "borrowDate": null
+    },
+    {
+      "id": "5",
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "genre": "Adventure",
+      "borrowed": false,
+      "borrowersName": null,
+      "borrowedDate": null,
+      "borrowerName": null,
+      "borrowDate": null,
+      "borrowCount": 4
+    },
+    {
+      "id": "6",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Romance",
+      "borrowed": false,
+      "borrowersName": null,
+      "borrowDate": null,
+      "borrowCount": 3,
+      "borrowerName": null
+    }
+  ]
+}
