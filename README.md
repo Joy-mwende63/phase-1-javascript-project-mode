@@ -28,3 +28,13 @@ To set up my Book Library, follow these steps:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Joy-mwende63/phase-1-javascript-project-mode.git
+
+## contact details:
+
+Name: Joy Mwanza
+Email: mwendejoy47@gmail.com
+GitHub: github.com/Joy-mwende63
+
+## License
+
+The content of this site is licensed under the MIT license Copyright (c) 2024.
