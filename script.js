@@ -23,7 +23,6 @@ async function displayBooks() {
         const li = document.createElement('li');
         li.innerText = `${book.title} by ${book.author} (${book.genre})`;
         
-        // Display borrowing information
         if (book.borrowed) {
             li.innerText += ` - Borrowed by: ${book.borrowerName} on ${formatDate(book.borrowDate)}`;
             li.appendChild(createReturnButton(book.id));
@@ -76,7 +75,7 @@ async function borrowBook(id, borrowerName) {
     
     bookData.borrowed = true;
     bookData.borrowerName = borrowerName;
-    bookData.borrowDate = new Date().toISOString(); // Store as ISO string for easy parsing
+    bookData.borrowDate = new Date().toISOString(); 
     bookData.borrowCount = (bookData.borrowCount || 0) + 1;
     
     await fetch(`http://localhost:3000/books/${id}`, {
@@ -94,7 +93,6 @@ async function displayStatistics() {
     const books = await fetchBooks();
     const totalBorrowings = books.reduce((sum, book) => sum + (book.borrowed ? 1 : 0), 0);
     
-    // Find the most popular books (top 5)
     const popularBooks = books.sort((a, b) => b.borrowCount - a.borrowCount).slice(0, 5);
 
     const statsSection = document.getElementById('statistics');
@@ -115,7 +113,7 @@ async function returnBook(id) {
 
     bookData.borrowed = false;
     bookData.borrowerName = null;
-    bookData.borrowDate = null; // Reset borrower info
+    bookData.borrowDate = null; 
 
     await fetch(`http://localhost:3000/books/${id}`, {
         method: 'PATCH',
@@ -132,16 +130,14 @@ async function deleteBook(id) {
     });
 }
 
-// Update borrower history
 function updateBorrowerHistory(borrowerName) {
     const historyItem = document.createElement('li');
     historyItem.innerText = `${borrowerName} borrowed a book on ${formatDate(new Date().toISOString())}`;
     borrowerHistorySection.appendChild(historyItem);
 }
 
-// Form submission with preventDefault
 bookForm.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); 
     const newBook = {
         title: document.getElementById('title').value,
         author: document.getElementById('author').value,
@@ -177,6 +173,5 @@ function filterBooks(books) {
     });
 }
 
-// Call display functions on load
 displayBooks();
 displayStatistics();
